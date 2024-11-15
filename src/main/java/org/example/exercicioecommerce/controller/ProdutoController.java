@@ -31,7 +31,7 @@ public class ProdutoController {
 
     @GetMapping
     public ResponseEntity<String> listarTodos() {
-        return ResponseEntity.status(220).body("To não");
+        return ResponseEntity.status(220).body("To sim");
     }
 
     @GetMapping("/{id}")
