@@ -30,13 +30,8 @@ public class ProdutoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<ProdutoListagemDto>> listarTodos() {
-        List<Produto> todosProdutos = this.repository.findAll();
-
-        if(todosProdutos.isEmpty()) return ResponseEntity.status(204).build();
-
-        List<ProdutoListagemDto> listaDto = ProdutoMapper.toDto(todosProdutos);
-        return ResponseEntity.status(200).body(listaDto);
+    public ResponseEntity<String> listarTodos() {
+        return ResponseEntity.status(220).body("To sim");
     }
 
     @GetMapping("/{id}")

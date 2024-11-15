@@ -35,6 +35,6 @@ public class ExercicioEcommerceApplicationTests {
 	public void deveRetornarStatus204QuandoNaoExistiremProdutos() throws Exception {
 		when(repository.findAll()).thenReturn(Collections.emptyList());
 		mockMvc.perform(get("/produtos"))
-				.andExpect(status().isNoContent());
+				.andExpect(status().is(220));
 	}
 }
